@@ -8,38 +8,46 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Parth | Startup Profit Prediction</title>
 </head>
+
+<style>
+    body {
+
+        background-color: #17153B;
+  }
+
+</style>
 <body>
     <div class="container">
         <div class="py-5 text-center">
             <img width="150" class="d-block mx-auto mb-4" src="/static/logo.png" alt="">
-            <h2>Startup Profit Prediction</h2>
-            <p class="lead">Below is an example form built to predict the Startup Profits</p>
+            <h2 style="color: white">Startup Profit Prediction</h2>
+            <p style="color: white" class="lead">Below is an example form built to predict the Startup Profits</p>
         </div>
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <h4 class="mb-3">Startup Expenses Details</h4>
+                <h4 style="color: white" class="mb-3">Startup Expenses Details</h4>
                 {% if show_hidden == True %}
                 <div class="alert alert-success" role="alert">{{ prediction_text }}</div>
                 {% endif %}
                 <form action="{{ url_for('predict')}}" method="post" class="needs-validation">
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="r_d_expenses">R&D Expenses</label>
+                            <label style="color: white" for="r_d_expenses">R&D Expenses</label>
                             <input type="text" class="form-control" id="r_d_expenses" name="r_d_expenses" placeholder="" value="" required>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="administration_expenses">Administration Expenses</label>
+                            <label style="color: white" for="administration_expenses">Administration Expenses</label>
                             <input type="text" class="form-control" id="administration_expenses" name="administration_expenses" placeholder="" value="" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="marketing_expenses">Marketing Expenses</label>
+                            <label style="color: white" for="marketing_expenses">Marketing Expenses</label>
                             <input type="text" class="form-control" id="marketing_expenses" name="marketing_expenses" placeholder="" value="" required>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="state">State</label>
+                            <label style="color: white" for="state">State</label>
                             <select id="state" name="state" class="form-control" required>
                                 <option value="" selected></option>
                                 <option value="New York">New York</option>
